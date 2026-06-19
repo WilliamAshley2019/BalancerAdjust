@@ -1,48 +1,7 @@
 
-Author
-William Ashley — AlphaAudio
-Balancer Adjust v3.0
-
-purpose: monintoring and adjusting audio particularly mid/side. 
-
-
---------------------------------------------------------------------------------------------------
-Copyright (c) 2026 William Ashley d/b/a William Ashley Music ( http://WilliamAshley.music )
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License  (v3) 
-
-This program is distributed in the hope that it will be useful to other audio programmers and music makers in their own plugin designs.
-There is no WARRANTY expressed or implied including for MERCHANTABILITY or FITNESS FOR ANY PURPOSE. 
-See the GNU General Public License for more details.
-
-Attributtion is requested where possible if you use or modify any of the source,
-Notice of use is requested so I can familiarize myself with how the code has been adapted for personal interest.
-contact@WilliamAshley.music   
------------------------------------------------------------------------------------------------------
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![JUCE](https://img.shields.io/badge/Built%20with-JUCE%208.0.12-blue)](https://juce.com)
-[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20-lightgrey)]()
-[![Format](https://img.shields.io/badge/Format-VST3%20%7C%20-orange)]()
-
-## Third-Party Licenses
-
-This project is built using the **JUCE framework**.
-
-JUCE is © Raw Material Software Limited and is licensed under the terms of the JUCE End User License Agreement (EULA) or the JUCE Open Source License, as applicable.
-
-- JUCE Website: https://juce.com
-- JUCE Source Code: https://github.com/juce-framework/JUCE
-
-This software may be distributed in VST3 format.
-
-VST3 is a trademark of Steinberg Media Technologies GmbH. The VST3 SDK is licensed under the Steinberg VST 3 SDK License Agreement.
-
-- Steinberg Website: https://www.steinberg.net
-- VST3 SDK Source: https://github.com/steinbergmedia/vst3sdk
-
-All trademarks and registered trademarks are the property of their respective owners.
-
----
+## Author: **William Ashley** — AlphaAudio  
+##Project: *Balancer Adjust*
+**Purpose:** Monitoring and adjusting audio, particularly Mid/Side processing.
 
 # Balancer Adjust
 
@@ -110,16 +69,43 @@ The compiled VST3 is located a few folders down from the repo root. Copy the `.v
 
 Then rescan plugins in your DAW. The plugin should appear as **Balancer Adjust**.
 
-## Author
-
-**William Ashley** — AlphaAudio  
-*Balancer Adjust v3.0*
-
-> **Purpose:** Monitoring and adjusting audio, particularly Mid/Side processing.
-
-> Readme will be expanded in more detail when I get around to the documentation stage.
 
 
 
-Readme will be added in more detail when I get around to documentation stage
-The vst3 is in the first folder down a few layers you should be able to copy and paste that folder into the commonfiles/vst3 folder on your system scan and it should show up and be usable.
+--------------------------------------------------------------------------------------------------
+Copyright (c) 2026 William Ashley d/b/a William Ashley Music ( http://WilliamAshley.music )
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License  (v3) 
+
+This program is distributed in the hope that it will be useful to other audio programmers and music makers in their own plugin designs.
+There is no WARRANTY expressed or implied including for MERCHANTABILITY or FITNESS FOR ANY PURPOSE. 
+See the GNU General Public License for more details.
+
+Attributtion is requested where possible if you use or modify any of the source,
+Notice of use is requested so I can familiarize myself with how the code has been adapted for personal interest.
+contact@WilliamAshley.music   
+-----------------------------------------------------------------------------------------------------
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![JUCE](https://img.shields.io/badge/Built%20with-JUCE%208.0.12-blue)](https://juce.com)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20-lightgrey)]()
+[![Format](https://img.shields.io/badge/Format-VST3%20%7C%20-orange)]()
+
+## Third-Party Licenses
+
+This project is built using the **JUCE framework**.
+
+JUCE is © Raw Material Software Limited and is licensed under the terms of the JUCE End User License Agreement (EULA) or the JUCE Open Source License, as applicable.
+
+- JUCE Website: https://juce.com
+- JUCE Source Code: https://github.com/juce-framework/JUCE
+
+This software may be distributed in VST3 format.
+
+VST3 is a trademark of Steinberg Media Technologies GmbH. The VST3 SDK is licensed under the Steinberg VST 3 SDK License Agreement.
+
+- Steinberg Website: https://www.steinberg.net
+- VST3 SDK Source: https://github.com/steinbergmedia/vst3sdk
+
+All trademarks and registered trademarks are the property of their respective owners.
+
+
