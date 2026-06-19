@@ -35,10 +35,53 @@ Steinberg Website: https://www.steinberg.net
 
 VST3 SDK Source: https://github.com/steinbergmedia/vst3sdk
 
-All trademarks and registered trademarks are the property of their respective owners.
-Juce 8.0.12
-
-Windows VST3 plugin 
+All trademarks and registered trademarks are the property of their respective owners.JBalancer Adjust
+A stereo Mid/Side utility plugin with per-channel EQ, width control, and monitoring tools.
+Built with JUCE 8 as a VST3/AU/AAX-compatible audio plugin. The DSP runs sample-by-sample in the M/S domain, giving you surgical control over the stereo field without leaving your DAW.
+What It Does
+Balancer Adjust is a mastering and mix utility that lets you treat the Mid (mono) and Side (stereo difference) channels independently. It combines several stereo-processing tools into one compact interface:
+Table
+Section	Function
+Monitor / Gain	Master gain fader, side gain (width) knob, and a monitor mode to solo Mid or Side for surgical listening. Includes a selectable summing law (-6 dB voltage or -3 dB power) for mono compatibility checks.
+Side Filters	Dedicated HPF and LPF applied only to the Side channel — useful for removing muddy stereo low-end or taming excessive stereo highs.
+Bass Focus	A quick elliptical filter that collapses low frequencies to mono below a user-defined crossover point. Handy for vinyl mastering or tightening up a mix's bottom end.
+M/S EQ Matrix	Three parametric EQ bands, each routable to Stereo, Mid only, or Side only. Filter types include Bell, HPF, LPF, High Shelf, and Low Shelf.
+Signal Flow
+plain
+Stereo In → M/S Encode
+            ├── Bass Focus (optional mono low-end)
+            ├── Side HPF / LPF
+            ├── M/S EQ Bands (routed per-band to M, S, or both)
+            ├── Side Gain (width control)
+            ├── Monitor Mode (Stereo / Solo Mid / Solo Side)
+            └── Master Gain → M/S Decode → Stereo Out
+All filter coefficients are rebuilt on parameter change using JUCE's dsp::IIR::Coefficients and processed with independent filter state for Mid and Side channels.
+Factory Presets
+Six built-in presets are baked into the binary as XML state strings:
+Table
+Preset	Purpose
+Default	Flat starting point
+EDM / Synthwave Mud Cleanup	Tightens low-mid buildup in wide synth pads
+Vocal Clarity / De-Boxing	Targets boxy midrange in the Mid channel
+Reverb Tamer / De-Clouding	Reduces washy stereo reverb tails
+Vinyl Mastering Prep	Elliptical bass mono + gentle side roll-off
+Safe Width Booster	Gentle side boost with protective HPF
+UI Design
+Dark charcoal / amber-gold custom LookAndFeel (AlphaLAF) with subtle scanline texture
+Custom-drawn rotary knobs with arc indicators and LED-style toggle buttons
+Sectioned panel layout with color-coded accents (blue for Mid, teal for Side)
+Preset selector and bypass toggle in the top bar
+620 × 520 px editor window
+Technical Notes
+Sample-accurate parameter smoothing on master gain and side gain via juce::LinearSmoothedValue
+Pure mono fallback — if the host sends a single channel, the plugin bypasses M/S processing and applies gain only
+APVTS-driven — all parameters live in a juce::AudioProcessorValueTreeState with SliderAttachment / ButtonAttachment / ComboBoxAttachment bindings
+State save/load — full session recall via ValueTree serialization
+Building
+Requires JUCE 8 and a C++20-capable compiler. Standard JUCE plugin project structure — drop the Source/ folder into a new JUCE audio plugin project and build.
+Author
+William Ashley — AlphaAudio
+Balancer Adjust v3.0
 
 purpose: monintoring and adjusting audio particularly mid/side. 
 
