@@ -19,19 +19,28 @@ Balancer Adjust is a mastering and mix utility that lets you treat the **Mid** (
 
 | Section | Function |
 |---------|----------|
-| **Monitor / Gain** | Master gain fader, side gain (width) knob, and a monitor mode to solo Mid or Side for surgical listening. Includes a selectable summing law (-6 dB voltage or -3 dB power) for mono compatibility checks. |
+| **Monitor / Gain** | Master gain fader, side gain (width) knob, and a monitor mode to solo Mid or Side for surgical listening. Includes a selectable summing law (-6 dB voltage or -3 dB power) for mono compatibility checks.|
 | **Side Filters** | Dedicated HPF and LPF applied **only** to the Side channel — useful for removing muddy stereo low-end or taming excessive stereo highs. |
+
 | **Bass Focus** | A quick elliptical filter that collapses low frequencies to mono below a user-defined crossover point. Handy for vinyl mastering or tightening up a mix's bottom end. |
+
 | **M/S EQ Matrix** | Three parametric EQ bands, each routable to **Stereo**, **Mid only**, or **Side only**. Filter types include Bell, HPF, LPF, High Shelf, and Low Shelf. |
+
 
 ## Signal Flow
 Stereo In → M/S Encode
 ├── Bass Focus (optional mono low-end)
+
 ├── Side HPF / LPF
+
 ├── M/S EQ Bands (routed per-band to M, S, or both)
+
 ├── Side Gain (width control)
+
 ├── Monitor Mode (Stereo / Solo Mid / Solo Side)
+
 └── Master Gain → M/S Decode → Stereo Out 
+
  All filter coefficients are rebuilt on parameter change using JUCE's `dsp::IIR::Coefficients` and processed with independent filter state for Mid and Side channels.
 
 ## Factory Presets
