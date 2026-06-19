@@ -16,6 +16,26 @@ contact@WilliamAshley.music
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20-lightgrey)]()
 [![Format](https://img.shields.io/badge/Format-VST3%20%7C%20-orange)]()
 
+
+Third-Party Licenses
+
+This project is built using the JUCE framework.
+
+JUCE is © Raw Material Software Limited and is licensed under the terms of the JUCE End User License Agreement (EULA) or the JUCE Open Source License, as applicable.
+
+JUCE Website: https://juce.com
+
+JUCE Source Code: https://github.com/juce-framework/JUCE
+
+This software may be distributed in VST3 format.
+
+VST3 is a trademark of Steinberg Media Technologies GmbH. The VST3 SDK is licensed under the Steinberg VST 3 SDK License Agreement.
+
+Steinberg Website: https://www.steinberg.net
+
+VST3 SDK Source: https://github.com/steinbergmedia/vst3sdk
+
+All trademarks and registered trademarks are the property of their respective owners.
 Juce 8.0.12
 
 Windows VST3 plugin 
